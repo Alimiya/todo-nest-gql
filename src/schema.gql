@@ -1,0 +1,54 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateTaskInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input CreateUserInput {
+  password: String!
+  username: String!
+}
+
+type LoginResponse {
+  access_token: String!
+  user: User!
+}
+
+input LoginUserInput {
+  password: String!
+  username: String!
+}
+
+type Mutation {
+  createTask(createTaskInput: CreateTaskInput!): Task!
+  createUser(createUserInput: CreateUserInput!): User!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+  register(loginUserInput: LoginUserInput!): User!
+  removeTask(id: Int!): Task!
+  updateTask(updateTaskInput: UpdateTaskInput!): Task!
+}
+
+type Query {
+  findUser(id: String!): User!
+  findUsers: [User!]!
+  task(id: Int!): Task!
+}
+
+type Task {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateTaskInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+type User {
+  id: String!
+  username: String!
+}
